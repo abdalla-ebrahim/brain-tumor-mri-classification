@@ -33,7 +33,7 @@ The project trains **four different models**, runs controlled experiments on the
 
 > The dataset is **not** included in this repository. Download it from the Kaggle link above and point the notebook's `data_dir` at the extracted folder (see [How to run](#how-to-run)).
 
-![Sample MRI images from each class](images/sample_mri_images.png)
+![Sample MRI images from each class](Images/sample_mri_images.png)
 
 ---
 
@@ -62,15 +62,15 @@ The project trains **four different models**, runs controlled experiments on the
 
 The best model separates the four tumor types cleanly, with most errors limited to a handful of glioma / meningioma mix-ups:
 
-![Confusion matrix — best model](images/confusion_matrix_model1.png)
+![Confusion matrix — best model](Images/confusion_matrix_model1.png)
 
 Training was stable, with a small gap between the training and validation curves (a sign of good generalization):
 
-![Training history — best model](images/training_history_model1.png)
+![Training history — best model](Images/training_history_model1.png)
 
 All four models side by side — accuracy, F1-score, precision vs. recall, and parameter count:
 
-![Model comparison](images/model_comparison.png)
+![Model comparison](Images/model_comparison.png)
 
 **A note on data augmentation.** In this setup, augmentation actually *reduced* performance — the augmented model fell to ~68% accuracy and was unstable across cross-validation folds. The lesson isn't "augmentation is bad," but that it has to be tuned to the data and verified empirically, not assumed to help.
 
@@ -124,7 +124,7 @@ All four models side by side — accuracy, F1-score, precision vs. recall, and p
 ## Repository contents
 
 - `brain_tumor_classification.ipynb` — the full notebook: data loading, all four models, the experiments, cross-validation, and evaluation (with saved outputs).
-- `images/` — the charts and figures used in this README.
+- `Images/` — the charts and figures used in this README.
 
 ---
 
